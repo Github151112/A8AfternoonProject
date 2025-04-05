@@ -1,5 +1,10 @@
 package com.Ecommerce.genericLibrary;
 
-public class CustomListener {
+import org.testng.ITestListener;
+
+public class CustomListener implements ITestListener {
+	
+	
+	
 
 }

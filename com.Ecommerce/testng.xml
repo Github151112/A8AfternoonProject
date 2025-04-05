@@ -4,6 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.Ecommerce.TestScripts.RegisterTest"/>
+      <class name="com.Ecommerce.TestScripts.InValidLoginTest"/>
       <class name="com.Ecommerce.TestScripts.LoginTest"/>
     </classes>
   </test> <!-- Test -->

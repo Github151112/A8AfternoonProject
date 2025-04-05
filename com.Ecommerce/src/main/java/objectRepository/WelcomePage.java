@@ -16,6 +16,13 @@ public class WelcomePage {
 	
 	@FindBy(linkText = "Log in")
 	private WebElement loginLink;
+	
+	@FindBy(className = "ico-logout")
+	private WebElement logoutLink;
+
+	public WebElement getLogoutLink() {
+		return logoutLink;
+	}
 
 	public WebElement getLoginLink() {
 		return loginLink;

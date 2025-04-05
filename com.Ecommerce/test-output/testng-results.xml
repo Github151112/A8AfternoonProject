@@ -1,29 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[==server connected sucessfully==]]>
     </line>
     <line>
       <![CDATA[==database connected sucessfully==]]>
-    </line>
-    <line>
-      <![CDATA[==database connected sucessfully==]]>
-    </line>
-    <line>
-      <![CDATA[==database connected sucessfully==]]>
-    </line>
-    <line>
-      <![CDATA[==closed browser suceessfully==]]>
-    </line>
-    <line>
-      <![CDATA[==database closed sucessfully==]]>
-    </line>
-    <line>
-      <![CDATA[==closed browser suceessfully==]]>
-    </line>
-    <line>
-      <![CDATA[==database closed sucessfully==]]>
     </line>
     <line>
       <![CDATA[==closed browser suceessfully==]]>
@@ -35,19 +17,29 @@
       <![CDATA[==server closed sucessfully==]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-04-04T15:08:57 IST" name="Suite" finished-at="2025-04-04T15:09:25 IST" duration-ms="27962">
+  <suite started-at="2025-04-05T16:25:37 IST" name="Default suite" finished-at="2025-04-05T16:25:48 IST" duration-ms="10557">
     <groups>
+      <group name="ST">
+        <method signature="LoginTest.login()[pri:0, instance:com.Ecommerce.TestScripts.LoginTest@63475ace]" name="login" class="com.Ecommerce.TestScripts.LoginTest"/>
+      </group> <!-- ST -->
     </groups>
-    <test started-at="2025-04-04T15:08:57 IST" name="ChromeTest" finished-at="2025-04-04T15:09:19 IST" duration-ms="21891">
-      <class name="com.Ecommerce.TestScripts.RegisterTest">
-        <test-method is-config="true" signature="toConnectDatabase()[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@1190200a]" started-at="2025-04-04T15:08:57 IST" name="toConnectDatabase" finished-at="2025-04-04T15:08:57 IST" duration-ms="1" status="PASS">
+    <test started-at="2025-04-05T16:25:37 IST" name="Default test" finished-at="2025-04-05T16:25:48 IST" duration-ms="10557">
+      <class name="com.Ecommerce.TestScripts.LoginTest">
+        <test-method is-config="true" signature="toConnectServer()[pri:0, instance:com.Ecommerce.TestScripts.LoginTest@63475ace]" started-at="2025-04-05T16:25:37 IST" name="toConnectServer" finished-at="2025-04-05T16:25:37 IST" duration-ms="23" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[==server connected sucessfully==]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- toConnectServer -->
+        <test-method is-config="true" signature="toConnectDatabase()[pri:0, instance:com.Ecommerce.TestScripts.LoginTest@63475ace]" started-at="2025-04-05T16:25:37 IST" name="toConnectDatabase" finished-at="2025-04-05T16:25:37 IST" duration-ms="1" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==database connected sucessfully==]]>
             </line>
           </reporter-output>
         </test-method> <!-- toConnectDatabase -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@1190200a]" started-at="2025-04-04T15:08:57 IST" name="setUp" finished-at="2025-04-04T15:09:03 IST" duration-ms="5818" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.Ecommerce.TestScripts.LoginTest@63475ace]" started-at="2025-04-05T16:25:38 IST" name="setUp" finished-at="2025-04-05T16:25:44 IST" duration-ms="6669" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -58,119 +50,72 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="register()[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@1190200a]" started-at="2025-04-04T15:09:03 IST" name="register" finished-at="2025-04-04T15:09:18 IST" duration-ms="15138" status="PASS">
+        <test-method signature="login()[pri:0, instance:com.Ecommerce.TestScripts.LoginTest@63475ace]" started-at="2025-04-05T16:25:44 IST" name="login" finished-at="2025-04-05T16:25:48 IST" duration-ms="3355" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [Demo Web Shop. Logi] but found [Demo Web Shop. Login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [Demo Web Shop. Logi] but found [Demo Web Shop. Login]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at com.Ecommerce.TestScripts.LoginTest.login(LoginTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- register -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@1190200a]" started-at="2025-04-04T15:09:18 IST" name="tearDown" finished-at="2025-04-04T15:09:19 IST" duration-ms="825" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[==closed browser suceessfully==]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="toCloseDatabase()[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@1190200a]" started-at="2025-04-04T15:09:19 IST" name="toCloseDatabase" finished-at="2025-04-04T15:09:19 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[==database closed sucessfully==]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- toCloseDatabase -->
-      </class> <!-- com.Ecommerce.TestScripts.RegisterTest -->
-    </test> <!-- ChromeTest -->
-    <test started-at="2025-04-04T15:08:57 IST" name="edgeTest" finished-at="2025-04-04T15:09:21 IST" duration-ms="23822">
-      <class name="com.Ecommerce.TestScripts.RegisterTest">
-        <test-method is-config="true" signature="toConnectDatabase()[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@2118cddf]" started-at="2025-04-04T15:08:57 IST" name="toConnectDatabase" finished-at="2025-04-04T15:08:57 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[==database connected sucessfully==]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- toConnectDatabase -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@2118cddf]" started-at="2025-04-04T15:08:57 IST" name="setUp" finished-at="2025-04-04T15:09:09 IST" duration-ms="11462" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="register()[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@2118cddf]" started-at="2025-04-04T15:09:09 IST" name="register" finished-at="2025-04-04T15:09:19 IST" duration-ms="10746" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- register -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@2118cddf]" started-at="2025-04-04T15:09:19 IST" name="tearDown" finished-at="2025-04-04T15:09:21 IST" duration-ms="1538" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[==closed browser suceessfully==]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="toCloseDatabase()[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@2118cddf]" started-at="2025-04-04T15:09:21 IST" name="toCloseDatabase" finished-at="2025-04-04T15:09:21 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[==database closed sucessfully==]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- toCloseDatabase -->
-      </class> <!-- com.Ecommerce.TestScripts.RegisterTest -->
-    </test> <!-- edgeTest -->
-    <test started-at="2025-04-04T15:08:57 IST" name="firefoxTest" finished-at="2025-04-04T15:09:25 IST" duration-ms="27962">
-      <class name="com.Ecommerce.TestScripts.RegisterTest">
-        <test-method is-config="true" signature="toConnectServer()[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@68567e20]" started-at="2025-04-04T15:08:57 IST" name="toConnectServer" finished-at="2025-04-04T15:08:57 IST" duration-ms="22" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[==server connected sucessfully==]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- toConnectServer -->
-        <test-method is-config="true" signature="toConnectDatabase()[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@68567e20]" started-at="2025-04-04T15:08:57 IST" name="toConnectDatabase" finished-at="2025-04-04T15:08:57 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[==database connected sucessfully==]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- toConnectDatabase -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@68567e20]" started-at="2025-04-04T15:08:57 IST" name="setUp" finished-at="2025-04-04T15:09:15 IST" duration-ms="18290" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="register()[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@68567e20]" started-at="2025-04-04T15:09:15 IST" name="register" finished-at="2025-04-04T15:09:23 IST" duration-ms="8051" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- register -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@68567e20]" started-at="2025-04-04T15:09:23 IST" name="tearDown" finished-at="2025-04-04T15:09:25 IST" duration-ms="1557" status="PASS">
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Ecommerce.TestScripts.LoginTest@63475ace]" started-at="2025-04-05T16:25:48 IST" name="tearDown" finished-at="2025-04-05T16:25:48 IST" duration-ms="438" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==closed browser suceessfully==]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="toCloseDatabase()[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@68567e20]" started-at="2025-04-04T15:09:25 IST" name="toCloseDatabase" finished-at="2025-04-04T15:09:25 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="toCloseDatabase()[pri:0, instance:com.Ecommerce.TestScripts.LoginTest@63475ace]" started-at="2025-04-05T16:25:48 IST" name="toCloseDatabase" finished-at="2025-04-05T16:25:48 IST" duration-ms="9" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==database closed sucessfully==]]>
             </line>
           </reporter-output>
         </test-method> <!-- toCloseDatabase -->
-        <test-method is-config="true" signature="toCloseServer()[pri:0, instance:com.Ecommerce.TestScripts.RegisterTest@68567e20]" started-at="2025-04-04T15:09:25 IST" name="toCloseServer" finished-at="2025-04-04T15:09:25 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="toCloseServer()[pri:0, instance:com.Ecommerce.TestScripts.LoginTest@63475ace]" started-at="2025-04-05T16:25:48 IST" name="toCloseServer" finished-at="2025-04-05T16:25:48 IST" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==server closed sucessfully==]]>
             </line>
           </reporter-output>
         </test-method> <!-- toCloseServer -->
-      </class> <!-- com.Ecommerce.TestScripts.RegisterTest -->
-    </test> <!-- firefoxTest -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.Ecommerce.TestScripts.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

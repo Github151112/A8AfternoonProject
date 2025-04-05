@@ -12,7 +12,7 @@ import objectRepository.WelcomePage;
 
 public class RegisterTest extends BaseTest {
 
-	@Test
+	@Test(groups = "RT")
 	public void register() throws InterruptedException, EncryptedDocumentException, IOException {
 
 		String fn = e.readDataFromExcel(EXCELPATH, REGSHEET, 1, 0);

@@ -13,6 +13,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 public class BaseTest implements IautoConstant {
@@ -22,18 +23,18 @@ public class BaseTest implements IautoConstant {
 	public ExcelUtility e = new ExcelUtility();
 	public  WebDriver driver;
 
-	@BeforeSuite
+	@BeforeSuite(alwaysRun = true)
 	public void toConnectServer() {
 		Reporter.log("==server connected sucessfully==",true);
 	}
 
-	@BeforeTest
+	@BeforeTest(alwaysRun = true)
 	public void toConnectDatabase() {
 		Reporter.log("==database connected sucessfully==",true);
 	}
 	@Parameters("browser")
-	@BeforeClass
-	public void setUp(String browser) throws IOException {
+	@BeforeClass(alwaysRun = true)
+	public void setUp(@Optional("chrome") String browser) throws IOException {
 		//String browser = f.getDataFromProperty(PROPPATH, "browser");
 		String url = f.getDataFromProperty(PROPPATH, "url");
 		if(browser.equalsIgnoreCase("chrome"))
@@ -49,18 +50,18 @@ public class BaseTest implements IautoConstant {
 		d.launchApplication(driver, url);
 	}
 	
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 		Reporter.log("==closed browser suceessfully==",true);
 		driver.quit();
 	}
 	
-	@AfterSuite
+	@AfterSuite(alwaysRun = true)
 	public void toCloseServer() {
 		Reporter.log("==server closed sucessfully==",true);
 	}
 
-	@AfterTest
+	@AfterTest(alwaysRun = true)
 	public void toCloseDatabase() {
 		Reporter.log("==database closed sucessfully==",true);
 	}

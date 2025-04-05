@@ -27,6 +27,14 @@ public class LoginPage extends BaseClass {
 		loginButton.click();
 	}
 	
+	public void performInvalidLogin(String email,String password)
+	{
+		emailTextField.sendKeys(email);
+		passwordTextField.sendKeys(password);
+		loginButton.click();
+		emailTextField.clear();
+	}
+	
 	
 
 }
